@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*@import url('https://fonts.googleapis.com/css?family=Space+Mono');*/
+@font-face {
+    font-family: "JetBrainsMonoBold";
+    font-weight: bold;
+    src: url("https://snblago.com/webfonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.html {
+    font-family: JetBrainsMono, monospace;
+}
+
+
+.animate-typewriter-cursor-blink {
+    animation: blink-typewriter 0.85s step-end infinite;
+}
+
+@keyframes blink-typewriter {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.bg-dark-navy-blue {
+    background-color: #2b3e50;
 }
